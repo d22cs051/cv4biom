@@ -1,228 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV4Biom Challenge 2025 (U&ME Workshop)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            background-color: #ffffff;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        .logos {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .logos img {
-            max-width: 200px;
-        }
-        .header nav {
-            display: flex;
-            gap: 20px;
-        }
-        .header nav a {
-            color: #333;
-            text-decoration: none;
-            font-size: 1.1em;
-            font-weight: 400;
-        }
-        .header nav a:hover {
-            text-decoration: underline;
-        }
-        .main-image {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
-        }
-        .image-credits {
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .content h2 {
-            font-size: 1.8em;
-            font-weight: 700;
-            margin: 20px 0;
-        }
-        .content p {
-            font-size: 1.1em;
-            margin: 10px 0;
-        }
-        .content p.quote {
-            font-style: italic;
-            color: #666;
-            margin-top: 20px;
-        }
-        .content ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        .content ul li {
-            font-size: 1.1em;
-            margin: 5px 0;
-        }
-        .content ul li a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        .content ul li a:hover {
-            text-decoration: underline;
-        }
-        .content .post {
-            margin: 20px 0;
-        }
-        .content .post-date {
-            font-size: 0.9em;
-            color: #666;
-        }
-        .content .post-title {
-            font-size: 1.2em;
-            font-weight: 700;
-            color: #1a73e8;
-            margin: 5px 0;
-        }
-        .diagram-image {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
-        }
-        .footer {
-            border-top: 1px solid #e0e0e0;
-            padding-top: 20px;
-            margin-top: 40px;
-        }
-        .footer p {
-            font-size: 1.1em;
-            margin: 5px 0;
-        }
-        .footer a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        .challenge-heading {
-            font-size: 2.5em;
-            font-weight: 500;
-            color: #444;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 10px;
-        }
-        @media (max-width: 768px) {
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CV4Biom Challenge 2025 (U&ME Workshop)</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                margin: 0;
+                font-family: "Roboto", sans-serif;
+                color: #333;
+                background-color: #ffffff;
+                line-height: 1.6;
+            }
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 20px;
+            }
             .header {
-                flex-direction: column;
-                align-items: flex-start;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 0;
             }
             .logos {
-                flex-direction: row;
-                width: 100%;
-                justify-content: space-between;
+                display: flex;
+                align-items: center;
+                gap: 20px;
             }
             .logos img {
-                max-width: 120px;
+                max-width: 200px;
             }
             .header nav {
-                margin-top: 10px;
-                gap: 15px;
+                display: flex;
+                gap: 20px;
+            }
+            .header nav a {
+                color: #333;
+                text-decoration: none;
+                font-size: 1.1em;
+                font-weight: 400;
+            }
+            .header nav a:hover {
+                text-decoration: underline;
+            }
+            .main-image {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: 20px 0;
+            }
+            .image-credits {
+                font-size: 0.9em;
+                color: #666;
+                margin-bottom: 20px;
             }
             .content h2 {
-                font-size: 1.5em;
+                font-size: 1.8em;
+                font-weight: 700;
+                margin: 20px 0;
             }
-            .content p, .content ul li, .footer p {
-                font-size: 1em;
+            .content p {
+                font-size: 1.1em;
+                margin: 10px 0;
+            }
+            .content p.quote {
+                font-style: italic;
+                color: #666;
+                margin-top: 20px;
+            }
+            .content ul {
+                margin: 10px 0;
+                padding-left: 20px;
+            }
+            .content ul li {
+                font-size: 1.1em;
+                margin: 5px 0;
+            }
+            .content ul li a {
+                color: #1a73e8;
+                text-decoration: none;
+            }
+            .content ul li a:hover {
+                text-decoration: underline;
+            }
+            .content .post {
+                margin: 20px 0;
+            }
+            .content .post-date {
+                font-size: 0.9em;
+                color: #666;
             }
             .content .post-title {
+                font-size: 1.2em;
+                font-weight: 700;
+                color: #1a73e8;
+                margin: 5px 0;
+            }
+            .diagram-image {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: 20px 0;
+            }
+            .footer {
+                border-top: 1px solid #e0e0e0;
+                padding-top: 20px;
+                margin-top: 40px;
+            }
+            .footer p {
                 font-size: 1.1em;
+                margin: 5px 0;
+            }
+            .footer a {
+                color: #1a73e8;
+                text-decoration: none;
+            }
+            .footer a:hover {
+                text-decoration: underline;
             }
             .challenge-heading {
-                font-size: 1.8em;
+                font-size: 2.5em;
+                font-weight: 500;
+                color: #444;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #e0e0e0;
+                padding-bottom: 10px;
             }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="challenge-heading">CV4Biom @ICCV'25</div>
-        <div class="header">
-            <div class="logos">
-                <img src="" alt="CV4Biom Challenge 2025 (U&ME Workshop) Logo">
-                <img src="second-logo" alt="Second Logo">
+            @media (max-width: 768px) {
+                .header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .logos {
+                    flex-direction: row;
+                    width: 100%;
+                    justify-content: space-between;
+                }
+                .logos img {
+                    max-width: 120px;
+                }
+                .header nav {
+                    margin-top: 10px;
+                    gap: 15px;
+                }
+                .content h2 {
+                    font-size: 1.5em;
+                }
+                .content p,
+                .content ul li,
+                .footer p {
+                    font-size: 1em;
+                }
+                .content .post-title {
+                    font-size: 1.1em;
+                }
+                .challenge-heading {
+                    font-size: 1.8em;
+                }
+            }
+
+            ul { margin-bottom: 1em; }
+            li { margin-bottom: 0.5em; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="challenge-heading">CV4Biom @ICCV'25</div>
+            <div class="header">
+                <div class="logos">
+                    <img
+                        src=""
+                        alt="CV4Biom Challenge 2025 (U&ME Workshop) Logo"
+                    />
+                    <img src="second-logo" alt="Second Logo" />
+                </div>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="organizers.html">Organizers</a>
+                    <a href="leaderboard.html">Leaderboard</a>
+                    <a href="call-for-entries.html">Call for Entries</a>
+                    <a href="faq.html">FAQ</a>
+                </nav>
             </div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="organizers.html">Organizers</a>
-                <a href="leaderboard.html">Leaderboard</a>
-                <a href="call-for-entries.html">Call for Entries</a>
-                <a href="faq.html">FAQ</a>
-            </nav>
+            <!-- <img src="genmu-image.png" alt="CV4Biom Challenge Image" class="main-image"> -->
+
+            <div class="content">
+                <h2>About the Challenge</h2>
+                <p align="justify">
+                    With growing global security concerns, biometric-based
+                    authentication and identification have become indispensable
+                    due to their reliability and robustness. Beyond physical
+                    biometrics, behavior understanding is emerging as a critical
+                    domain, aiming to interpret complex behavioral patterns that
+                    arise during interactions. Integrating both biometric and
+                    behavioral insights can lead to more secure, adaptive, and
+                    context-aware identity verification systems. Computer vision
+                    plays a pivotal role in analyzing and synthesizing
+                    biometric, identity, and behavior data. Recent advancements
+                    in BIB research, driven by deep learning and multimodal
+                    analysis, have significantly expanded the field. However,
+                    numerous challenges remain, including effective joint
+                    modeling of multimodal cues occurring at different time
+                    scales, handling the inherent uncertainty of
+                    machine-detectable behavioral evidence, and addressing
+                    long-term dependencies in human behavior and identity
+                    recognition. This workshop aims to bring together leading
+                    researchers, industry experts, and government agencies to
+                    discuss the latest breakthroughs in BIB research. It will
+                    serve as a platform to explore cutting-edge solutions, share
+                    innovative methodologies, and address the open challenges in
+                    this evolving field.
+                </p>
+                <ul align="justify">
+                    <li>
+                        <h3>Biometrics and Identity: Technologies,Applications, and Challenges:</h3>
+                        <ul>
+                            <li>
+                                <strong>Biometric Modalities and Sensors:</strong>
+                                Face, fingerprint, ear, eye (iris, retina), vein
+                                patterns, palm, gait, and emerging biometric
+                                traits.
+                            </li>
+                            <li>
+                                <strong>Biometric Processing and Computation:</strong>
+                                Template generation, feature extraction,
+                                matching algorithms, and dataset baselines.
+                            </li>
+                            <li>
+                                <strong>Multi-Biometrics and Fusion:</strong>
+                                Information fusion, normalization techniques,
+                                machine learning-based integration, and
+                                theoretical models.
+                            </li>
+                            <li>
+                                <strong>Privacy, Security and Bias:</strong>
+                                Bias mitigation, privacy-preserving techniques,
+                                security assessments, and adversarial robustness
+                                in biometric systems.
+                            </li>
+                            <li>
+                                <strong>Forensic and Law Enforcement Applications:</strong>
+                                Biometrics in forensics, crime investigation,
+                                and security assessment.
+                            </li>
+                            <li>
+                                <strong>Biometrics in Technology and Industry:</strong>
+                                Mobile and wearable devices, banking, IoT,
+                                large-scale identity management, and biometric
+                                authentication standards.
+                            </li>
+                            <li>
+                                <strong>Emerging Challenges and Ethical Considerations:</strong>
+                                Digital data forensics, biometric deepfakes,
+                                synthetic realities, ethical, social, and legal
+                                issues in biometric adoption.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Behavior Understanding and Applications:</h3>
+                        <ul>
+                            <li>
+                                <strong>Multimodal Behavior Modeling:</strong>
+                                Human and animal behavior analysis, social
+                                interactions, empathy, and emotional
+                                intelligence.
+                            </li>
+                            <li>
+                                <strong>Generative and Machine Learning Approaches:</strong>
+                                Advanced learning models for behavior prediction
+                                and synthesis.
+                            </li>
+                            <li>
+                                <strong>Sensor Technologies and Data Fusion:</strong>
+                                Multisensory solutions, information fusion
+                                techniques, and integration for behavior
+                                analysis.
+                            </li>
+                            <li>
+                                <strong>Datasets and Benchmarks:</strong>
+                                Standardized datasets and evaluation metrics for
+                                behavior recognition and prediction.
+                            </li>
+                            <li>
+                                <strong>Attention and Perception Analysis:</strong>
+                                Visual attention, visual saliency, and cognitive
+                                modeling.
+                            </li>
+                            <li>
+                                <strong>Assistive and Inclusive Technologies:</strong>
+                                Applications for the visually and hearing
+                                impaired, sign language recognition, and
+                                assistive living solutions.
+                            </li>
+                            <li>
+                                <strong>Personalized and Health-Centric Applications:</strong>
+                                Monitoring for aging populations, child
+                                development, and quality-of-life technologies.
+                            </li>
+                            <li>
+                                <strong>Egocentric and First-Person Vision:</strong>
+                                Wearable vision-based applications for
+                                personalized assistance and behavior tracking.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Update May 2025.</strong> TBD</p>
+
+                <h2>Useful Links</h2>
+                <ul>
+                    <li><a href="#">TBD</a></li>
+                    <li><a href="#">TBD</a></li>
+                    <li><a href="#">TBD</a></li>
+                    <li><a href="#">TBD</a></li>
+                    <li><a href="#">TBD</a></li>
+                </ul>
+
+                <h2>Timeline</h2>
+                <p align="justify">
+                    <strong>Check phase:</strong> Begins TBD. Initial
+                    announcement and availability of the "starting kit",
+                    containing a notebook with an example simple unlearning
+                    algorithm and a simple metric for evaluation, so that
+                    participants can start practicing.
+                </p>
+                <p align="justify">
+                    <strong>Feedback phase:</strong> Date TBD. Submission site
+                    opens and participants can start making submissions on
+                    Kaggle.
+                </p>
+                <p align="justify">
+                    <strong>Final phase:</strong> Date TBD. During this phase,
+                    the organizers can run additional analyses on the submitted
+                    unlearning algorithms, including different metrics and
+                    datasets.
+                </p>
+                <p align="justify">Winners will be announced in the beginning of June.</p>
+
+                <h2>Contact</h2>
+                <p align="justify">
+                    Announcements about the competition will be made on the
+                    website.
+                </p>
+
+                <div class="post">
+                    <div class="post-date">Date: TBD</div>
+                    <div class="post-title">TBD</div>
+                </div>
+                <div class="post">
+                    <div class="post-date">Date: TBD</div>
+                    <div class="post-title">TBD</div>
+                </div>
+                <div class="post">
+                    <div class="post-date">Date: TBD</div>
+                    <div class="post-title">TBD</div>
+                    <div>Subscribe via <a href="#">RSS</a></div>
+                </div>
+            </div>
+            <div class="footer">
+                <p><strong>CV4Biom Challenge 2025 (U&ME Workshop)</strong></p>
+                <p><a href="mailto:TBD">Mail to : TBD</a></p>
+                <p>Website for the CV4Biom Challenge 2025 (U&ME Workshop).</p>
+                <p><a href="https://twitter.com/TBD">X : @TBD</a></p>
+            </div>
         </div>
-        <!-- <img src="genmu-image.png" alt="CV4Biom Challenge Image" class="main-image"> -->
-        
-        <div class="content">
-            <h2>About the Challenge</h2>
-            <p>
-                With growing global security concerns, biometric-based authentication and identification have become indispensable due to their reliability and robustness. Beyond physical biometrics, behavior understanding is emerging as a critical domain, aiming to interpret complex behavioral patterns that arise during interactions. Integrating both biometric and behavioral insights can lead to more secure, adaptive, and context-aware identity verification systems. Computer vision plays a pivotal role in analyzing and synthesizing biometric, identity, and behavior data. Recent advancements in BIB research, driven by deep learning and multimodal analysis, have significantly expanded the field. However, numerous challenges remain, including effective joint modeling of multimodal cues occurring at different time scales, handling the inherent uncertainty of machine-detectable behavioral evidence, and addressing long-term dependencies in human behavior and identity recognition. This workshop aims to bring together leading researchers, industry experts, and government agencies to discuss the latest breakthroughs in BIB research. It will serve as a platform to explore cutting-edge solutions, share innovative methodologies, and address the open challenges in this evolving field.
-            </p>
-            <p><strong>Update May 2025.</strong> TBD</p>
-
-            <h2>Useful Links</h2>
-            <ul>
-                <li><a href="#">TBD</a></li>
-                <li><a href="#">TBD</a></li>
-                <li><a href="#">TBD</a></li>
-                <li><a href="#">TBD</a></li>
-                <li><a href="#">TBD</a></li>
-            </ul>
-
-            <h2>Timeline</h2>
-            <p><strong>Check phase:</strong> Begins TBD. Initial announcement and availability of the "starting kit", containing a notebook with an example simple unlearning algorithm and a simple metric for evaluation, so that participants can start practicing.</p>
-            <p><strong>Feedback phase:</strong> Date TBD. Submission site opens and participants can start making submissions on Kaggle.</p>
-            <p><strong>Final phase:</strong> Date TBD. During this phase, the organizers can run additional analyses on the submitted unlearning algorithms, including different metrics and datasets.</p>
-            <p>Winners will be announced in the beginning of June.</p>
-
-            <h2>Contact</h2>
-            <p>Announcements about the competition will be made on the website.</p>
-
-            <div class="post">
-                <div class="post-date">Date: TBD</div>
-                <div class="post-title">TBD</div>
-            </div>
-            <div class="post">
-                <div class="post-date">Date: TBD</div>
-                <div class="post-title">TBD</div>
-            </div>
-            <div class="post">
-                <div class="post-date">Date: TBD</div>
-                <div class="post-title">TBD</div>
-                <div>Subscribe via <a href="#">RSS</a></div>
-            </div>
-        </div>
-        <div class="footer">
-            <p><strong>CV4Biom Challenge 2025 (U&ME Workshop)</strong></p>
-            <p><a href="mailto:TBD">Mail to : TBD</a></p>
-            <p>Website for the CV4Biom Challenge 2025 (U&ME Workshop).</p>
-            <p><a href="https://twitter.com/TBD">X : @TBD</a></p>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
